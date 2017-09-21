@@ -1,0 +1,123 @@
+body {
+  /*background: url("../../image/loginbj.jpg") repeat scroll;*/
+
+  background: #1079c9;
+  background-size: cover;
+}
+body .logcen {
+  /*background: url("../../image/logincen.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+
+  background: #fff;
+  height: 320px;
+  left: 50%;
+  margin: -220px 0 0 -230px;
+  position: absolute;
+  top: 50%;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  width: 430px;
+  height: 415px;
+}
+body #login-form {
+  text-align: center;
+}
+body #login-form input[type='text']:nth-last-child(2) {
+  width: 211px;
+}
+body #login-form input[type='submit'] {
+  margin-left: 50px !important;
+  line-height: 20px !important;
+  background: #25a2e2 !important;
+  height: 46px !important;
+  border: none;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+body #login-form .error-summary {
+  text-align: left;
+  margin-top: 20px;
+  width: 300px;
+  line-height: 25px;
+  border: 1px solid #eed10f;
+  background: #f7f7d8;
+  margin-left: 55px;
+  color: #f62929;
+}
+body #login-form .error-summary p {
+  display: none;
+}
+body #login-form .error-summary ul {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+body #login-form .wrap-div {
+  width: 360px;
+  margin-left: 32px;
+}
+body #login-form .wrap-div h3 {
+  margin-left: 0;
+  color: #25a2e2;
+  font-size: 28px;
+  text-align: left;
+  text-indent: 54px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 6px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+body #login-form .wrap-div .form-group {
+  margin-bottom: 10px;
+}
+body #login-form .wrap-div .form-group > label {
+  text-align: left;
+  font-size: 14px;
+  color: #666;
+  width: 60px;
+  padding-right: 0;
+  text-indent: 13px;
+}
+body #login-form .wrap-div input {
+  height: 40px;
+  line-height: 40px;
+  width: 300px;
+  padding-left: 0;
+  text-indent: 1em;
+}
+body #login-form .wrap-div #adminmodel-captcha {
+  width: 164px;
+}
+body #login-form .wrap-div .control-label {
+  padding: 0;
+  line-height: 40px;
+}
+body #login-form .wrap-div .control-label #adminmodel-captcha-image {
+  float: right;
+  margin-right: 5px;
+  width: 128px !important;
+  height: 40px !important;
+  border: 1px solid #dedede;
+  display: inline-block;
+}
+.table_border_none tr td img.verify {
+  margin-top: -1px;
+}
+.table_border_none tr td:first-child {
+  text-indent: 40px;
+  text-align: right;
+}
+.table_border_none input {
+  width: 45%;
+}
+.table_border_none input[name^='code'] {
+  width: 80px;
+}
+.table_border_none input[type='submit'] {
+  margin-left: 61px;
+  text-align: center;
+}
+.table_border_none img.verify {
+  width: 94px;
+  height: 25px;
+}
