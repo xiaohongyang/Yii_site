@@ -63,9 +63,9 @@ class AdminModel  extends BaseModel implements IdentityInterface
                 'required',
                 'on' => self::SCENARIO_LOGIN
             ],
-            [
+          /*  [
                 'captcha', 'captcha', 'on' => self::SCENARIO_LOGIN
-            ]
+            ]*/
         ];
     }
 
@@ -198,6 +198,7 @@ class AdminModel  extends BaseModel implements IdentityInterface
      * @return bool
      */
     public function validatePassword($password) {
+
         return \Yii::$app->getSecurity()->validatePassword($password . $this->authKey, $this->password);
     }
     #endregion

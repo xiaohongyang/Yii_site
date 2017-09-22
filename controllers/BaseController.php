@@ -27,7 +27,8 @@ class BaseController extends Controller
         if(!ConfigTrait::isIniTed()) {
 
             $configModel = ConfigModel::findOne(1);
-            ConfigTrait::configInit($configModel);
+            if($configModel)
+                ConfigTrait::configInit($configModel);
         }
     }
 

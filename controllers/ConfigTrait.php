@@ -16,9 +16,9 @@ trait ConfigTrait
 
     public static function configInit(ConfigModel $configModel){
 
-        self::setDistanceLimit($configModel->getDistanceLimit());
-        self::setClockTimeLimit($configModel->getClockTimeLimit());
-        self::setOffDutyLimit($configModel->getOffDutyLimit());
+//        self::setDistanceLimit($configModel->getDistanceLimit());
+//        self::setClockTimeLimit($configModel->getClockTimeLimit());
+//        self::setOffDutyLimit($configModel->getOffDutyLimit());
     }
 
     public static function isIniTed(){

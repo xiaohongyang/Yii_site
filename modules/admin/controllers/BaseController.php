@@ -10,6 +10,7 @@ namespace app\modules\admin\controllers;
 
 
 use app\controllers\ConfigTrait;
+use app\modules\admin\models\ConfigModel;
 use yii\helpers\Url;
 use yii\web\Controller;
 
@@ -31,7 +32,8 @@ class BaseController extends Controller
         if(!ConfigTrait::isIniTed()) {
 
             $configModel = ConfigModel::findOne(1);
-            ConfigTrait::configInit($configModel);
+            if($configModel)
+                ConfigTrait::configInit($configModel);
         }
     }
 
