@@ -38,7 +38,7 @@ use \yii\helpers\Url;
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => '您好,'. Yii::$app->admin_user->identity->mobile, 'url' => Yii::$app->homeUrl],
+            ['label' => '您好,'. Yii::$app->admin_user->identity->username, 'url' => Yii::$app->homeUrl],
             ['label' => '前台首页', 'url' => Yii::$app->homeUrl],
             ['label' => '退出', 'url' => ['/admin/public/logout']],
 

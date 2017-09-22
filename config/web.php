@@ -93,7 +93,6 @@ if (YII_ENV_DEV) {
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
-        'allowedIPs' => ['127.0.0.1', '::1','192.168.99.1','192::'] // adjust this to your needs
     ];
 }
 
