@@ -25,7 +25,7 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use yii\web\Cookie;
 
-class SiteController extends BaseController
+class SiteController extends Controller
 {
     /*public function init()
     {
@@ -37,12 +37,12 @@ class SiteController extends BaseController
     /**
      * @inheritdoc
      */
-    public function behaviors()
+    /*public function behaviors()
     {
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout'],
+                'only' => ['logout','gii'],
                 'rules' => [
                     [
                         'actions' => ['logout'],
@@ -58,7 +58,7 @@ class SiteController extends BaseController
                 ],
             ],
         ];
-    }
+    }*/
 
     /**
      * @inheritdoc

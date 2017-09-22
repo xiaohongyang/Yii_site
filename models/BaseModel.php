@@ -28,9 +28,28 @@ class BaseModel extends ActiveRecord
 
 
     public function create($data){
-        $this->setScenario(self::SCENARIO_CREATE);
-        if ($this->load($data) && $this->validate()) {
+        $this->setScenario(!array_key_exists(self::SCENARIO_CREATE, $this->scenarios())
+            ? self::SCENARIO_DEFAULT : self::SCENARIO_CREATE);
+
+        $rs = false;
+
+        if(!key_exists($this->formName(), $data)) {
+            $data = [$this->formName() => $data];
         }
+
+        if ($this->load($data) && $this->validate()) {
+            $rs = $this->save();
+        }
+        return $rs;
+    }
+
+    public function edit($data){
+        $this->setScenario(self::SCENARIO_UPDATE);
+        $rs = false;
+        if ($this->load($data) && $this->validate()) {
+            $rs = $this->save();
+        }
+        return $rs;
     }
 
     public static function getDbPrefix(){
