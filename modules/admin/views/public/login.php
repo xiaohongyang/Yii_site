@@ -33,7 +33,7 @@ use yii\helpers\Html;
                 <div class="margin-top-small" style="margin-top: 20px;"> </div>
 
 
-                <?= $form->field($model, 'mobile')->textInput(['placeholder'=>'请输入手机号']) ?>
+                <?= $form->field($model, 'username')->textInput(['placeholder'=>'请输入登录名']) ?>
 
                 <?= $form->field($model, 'password')->passwordInput(['placeholder'=>'请输入密码'])->label('密&nbsp;码') ?>
 

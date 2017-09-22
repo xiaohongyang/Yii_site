@@ -29,6 +29,7 @@ class BaseController extends Controller
         if($this->isCheck)
             $this->checkLogin();
 
+
         if(!ConfigTrait::isIniTed()) {
 
             $configModel = ConfigModel::findOne(1);
@@ -66,8 +67,11 @@ class BaseController extends Controller
         if(\Yii::$app->admin_user->isGuest && $isJson) {
             return $this->renderJson(STATUS_NOT_LOGIN, "您尚未登录,请先登录", [], null, true);
         } else if(\Yii::$app->admin_user->isGuest) {
-            $this->redirect(Url::to(['/admin/public/login']));
+            $url = Url::to(['/admin/public/login']);
+            Header("Location:{$url}");
+            exit;
         }
+        return true;
     }
 
 

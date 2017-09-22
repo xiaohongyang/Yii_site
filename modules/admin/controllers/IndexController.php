@@ -16,18 +16,7 @@ class IndexController extends BaseController
 {
     public function actionIndex(){
 
-        $configModel = ConfigModel::findOne(1);
 
-        if (\Yii::$app->request->isPost) {
-            $rs = $configModel->edit(\Yii::$app->request->post());
-            if ($rs) {
-                \Yii::$app->session->setFlash('message', '修改成功');
-            } else {
-                \Yii::$app->session->setFlash('message', '修改失败');
-            }
-            return $this->goBack(Url::to(['/admin/index/index']));
-        }
-
-        return $this->render('index', ['model' => $configModel]);
+        return $this->render('index', ['model' => []]);
     }
 }

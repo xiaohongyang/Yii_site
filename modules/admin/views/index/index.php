@@ -7,32 +7,13 @@
 
 <div class="config-set">
 	<h1> <?=$this->title?> </h1>
-<?php
-	$form = \yii\widgets\ActiveForm::begin([
-		'options' => [
-			'class' => 'form-inline'
-		]
-	]);
-?>
-
-
-	<?php //$form->field($model, 'webName')->textInput()?>  <br/>
-
-	<?=$form->field($model, 'distance_limit')->textInput()?> <br/>
-
-	<?=$form->field($model, 'clock_time_limit')->textInput()?> <br/>
-
-	<?=$form->field($model, 'off_duty_limit')->textInput()->label('下班打卡匹配时间限制(分钟)')?> <br/>
-
-
 
 	<div class="form-group">
 
-		<?=\yii\bootstrap\Html::submitButton("提交", ['class'=>'btn btn-success btn-sm'])?>
 	</div>
 
 
-	<?php $form::end()?>
+
 </div>
 
 

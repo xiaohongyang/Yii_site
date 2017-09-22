@@ -46,7 +46,7 @@ class PublicController extends BaseController
         if (\Yii::$app->request->isPost) {
             $rs = $adminModel->login(\Yii::$app->request->post());
             if ($rs){
-                \Yii::$app->admin_user->login(AdminUser::findOne(['mobile'=>$adminModel->mobile]));
+                \Yii::$app->admin_user->login(AdminUser::findOne(['username'=>$adminModel->username]));
                 return $this->redirect(Url::to(['/admin/index/index']));
             }
         }

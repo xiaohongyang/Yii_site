@@ -56,9 +56,9 @@ class AdminModel  extends BaseModel implements IdentityInterface
             ],
             [
                 [
-                    'mobile',
+                    'username',
                     'password',
-                    'captcha',
+                    //'captcha',
                 ],
                 'required',
                 'on' => self::SCENARIO_LOGIN
@@ -80,7 +80,7 @@ class AdminModel  extends BaseModel implements IdentityInterface
                 'accessToken',
             ], self::SCENARIO_LOGIN => [
                 'password',
-                'mobile',
+                'username',
                 'captcha',
             ], self::SCENARIO_UPDATE => [
                 'username',
@@ -123,7 +123,7 @@ class AdminModel  extends BaseModel implements IdentityInterface
         }
         $this->scenario = self::SCENARIO_LOGIN;
         if ($this->load($data) && $this->validate()) {
-            $model = self::findOne(['mobile' => $this->mobile]);
+            $model = self::findOne(['username' => $this->username]);
             if($model && $model->validatePassword($this->password)) {
                 $rs = true;
             } else {
@@ -189,7 +189,11 @@ class AdminModel  extends BaseModel implements IdentityInterface
 
     private function _generatePassword() {
         $this->authKey = $this->_generateAuthKey();
-        return \Yii::$app->security->generatePasswordHash($this->password . $this->authKey);
+        return md5($this->password . $this->authKey);
+    }
+
+    private function _getDbPassword($password) {
+        return md5($password . $this->authKey);
     }
 
     /**
@@ -199,7 +203,8 @@ class AdminModel  extends BaseModel implements IdentityInterface
      */
     public function validatePassword($password) {
 
-        return \Yii::$app->getSecurity()->validatePassword($password . $this->authKey, $this->password);
+
+        return $this->_getDbPassword($password) == $this->password;
     }
     #endregion
 
