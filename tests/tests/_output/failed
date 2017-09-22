@@ -1,1 +1,2 @@
-tests\acceptance\TestCept.php
+unit\models\UserTest.php:testFindUserByAccessToken
+unit\models\UserTest.php:testFindUserByUsername

@@ -2,14 +2,15 @@
 namespace tests\models;
 use app\models\User;
 use app\models\UserModel;
+use app\modules\admin\models\AdminModel;
 
 class UserTest extends \Codeception\Test\Unit
 {
     public function testFindUserById()
     {
-        expect_that($user = UserModel::findIdentity(100));
-        expect($user->username)->equals('admin');
-
+        $model = AdminModel::find();
+        $model= $model->all();
+        print_r($model);
     }
 
     public function testFindUserByAccessToken()
