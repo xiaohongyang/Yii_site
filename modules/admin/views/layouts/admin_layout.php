@@ -50,11 +50,11 @@ use \yii\helpers\Url;
     <div class="container-fluid">
 
         <div class="row">
-            <div id="left" class="col-md-3">
+            <div id="left" class="col-md-2">
                 <?=$this->render('left.php')?>
             </div>
 
-            <div class="col-md-9">
+            <div class="col-md-10">
                 <?= Breadcrumbs::widget([
                     'homeLink' => false,
                     'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],

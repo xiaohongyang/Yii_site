@@ -24,12 +24,12 @@ if ($controller == 'index' && $action=='index') {
 
 $menuList = [
     [
-        'word' => 'app设置',
-        'link' => Url::to(['/admin/index/index']),
+        'word' => '按钮管理',
+        'link' => Url::to(['/admin/btn/index']),
         'target' => '',
         'class' => $classConfig
     ],[
-        'word' => '轮播管理',
+        'word' => '报表管理',
         'link' => Url::to(['/admin/article/index']),
         'target' => '',
         'class' => $classSlide
