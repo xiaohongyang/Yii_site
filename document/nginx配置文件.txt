@@ -1,0 +1,27 @@
+server {
+        listen 80 ;
+        listen [::]:80 ;
+
+        client_max_body_size 8M;
+        client_body_buffer_size 128k;
+
+        root /home/wwwroot/www/project/yii_site/web;
+
+        index php index.html index.htm index.nginx-debian.html index.php;
+
+        server_name yii_site;
+
+        location / {
+                try_files $uri $uri/ /index.php?$query_string;
+        }
+
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+
+                fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+        }
+
+        location ~ /\.ht {
+                deny all;
+        }
+}
