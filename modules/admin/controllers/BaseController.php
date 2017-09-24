@@ -13,6 +13,7 @@ use app\controllers\ConfigTrait;
 use app\modules\admin\models\ConfigModel;
 use yii\helpers\Url;
 use yii\web\Controller;
+use yii\web\Response;
 
 class BaseController extends Controller
 {

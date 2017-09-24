@@ -7,7 +7,7 @@ use yii\helpers\Html;
 /* @var $model app\models\BtnCURD */
 
 $this->title = 'Create Btn Curd';
-$this->params['breadcrumbs'][] = ['label' => 'Btn Curds', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => '按钮管理', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="btn-curd-create">

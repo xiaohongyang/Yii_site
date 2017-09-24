@@ -10,7 +10,7 @@ use yii\helpers\Html;
 
     <div class="row">
 
-        <div class="  logcen test">
+        <div class="  logcen test" style="height: 255px;">
 
 
             <?php $form = \yii\widgets\ActiveForm::begin([
@@ -24,7 +24,7 @@ use yii\helpers\Html;
                 'enableAjaxValidation' => false
             ]); ?>
             <div class="wrap-div">
-                <h3 class="col-md-offset-1">共享通勤后台登录系统</h3>
+                <h3 class="col-md-offset-1">HIFI登录系统</h3>
 
                 <div>
                     <?=$form->errorSummary($model); ?>
@@ -35,31 +35,15 @@ use yii\helpers\Html;
 
                 <?= $form->field($model, 'username')->textInput(['placeholder'=>'请输入登录名']) ?>
 
-                <?= $form->field($model, 'password')->passwordInput(['placeholder'=>'请输入密码'])->label('密&nbsp;码') ?>
+                <?= $form->field($model, 'password')->passwordInput(['placeholder'=>'请输入密码'])->label('密&nbsp;码&nbsp;&nbsp;') ?>
 
-                <?php
 
-                $template = <<<STD
-                        
-                            {input}
-                            <span class="control-label" for="mobile">{image}</span>
-STD;
-                echo $form->field($model, 'captcha')->widget(Captcha::className(),[
 
-                    'captchaAction' => '/admin/public/captcha',
-                    'template' => $template,
-
-                    'imageOptions' => [
-                        'style' => 'width: 80px; height: 30px;'
-                    ],
-                    'options' => ['placeholder'=>'请输入验证码']
-                ])?>
-
-                <div class="form-group">
+                <div class="form-group" >
 
                     <!--<input type="submit" value="登录" class="btn btn-success center-block">-->
 
-                    <div class=" ">
+                    <div class=" " style="width: 356px;">
                         <?= Html::submitInput('登录', [
                             'class' => 'btn btn-success '
                         ]); ?>

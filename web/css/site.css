@@ -113,3 +113,14 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+
+.navbar-inverse .navbar-toggle{
+    display: none !important;
+}
+.navbar-toggle{
+    display: none;
+}
+
+a.navbar-brand{
+    display: none;
+}

@@ -1,8 +1,32 @@
+<style type="text/css">
+    .section-camera .container .section-img{
+        left: 0;
+        margin-left: 15%;
+    }
+
+    .the_title{
+        font-size: 3em;
+    }
+    .the_content{
+        font-size: 1.5em; margin-top:12px;
+    }
+    .btn-wrap{
+        padding-top: 140px; margin-left: 15%;
+    }
+    .btn-wrap a{
+        line-height: 100px; font-size: 2em; width: 260px;
+    }
+    .section .section-text .rect-short{
+        width: 220px;
+        height: 70px;
+        line-height: 70px;
+    }
+</style>
+
 <div class="entry-board J_entryBoard">
     <div class="container">
     </div>
 </div>
-
 
 
 <div class="main">
@@ -13,32 +37,31 @@
 
         <div class="section section-camera" style="">
             <div class="container">
-                <div class="section-img"  style="top: 220px;">
-                    <div style="font-size: 3em;">
-                        “发现”比“找到”更重要
+                <div class="section-img" style="top: 220px;">
+                    <div class="the_title" style="">
+                        <?=$model->title?>
 
                     </div>
-                    <div style="font-size: 1em; margin-top:24px;">
-                        针对传统网址导航我们做了如下改进： 以提问作为网址内容入口，甚至是目录 提高网民对收录网站的参与程度，任何人可推荐网址，参与编辑 形成更加开放的网站收录和评价平台
+                    <div class="the_content" style="">
+                        <?=$model->content_1?>
                     </div>
                 </div>
 
                 <div class="section-text">
-                    <div class="title1">Flagship dual camera</div>
-                    <div class="title2">2 cameras, 1 perfect portrait.</div>
+                    <div class="title1"> </div>
+                    <div class="title2"> </div>
                     <div class="rect-long" style="display:none;">
-
-
 
                     </div>
 
-                    <div style="padding-top: 70px; margin-left: 130px;">
+                    <div class="btn-wrap" style="">
 
 
-                        <a href="<?=\yii\helpers\Url::to(['site/page4'])?>" style=" ">
+                        <a href="<?=\yii\helpers\Url::to(['site/page3'])?>" style=" ">
 
-                            <div class="rect-short rect-short-left" style="line-height: 100px; border: 1px solid green; font-size: 2em; width: 400px;">
-                                注册（登录）
+                            <div class="rect-short rect-short-left"
+                                 style="">
+                                <?=\app\common\components\widget\BtnWidget::widget(['btn_id'=>5])?>
                             </div>
                         </a>
 
@@ -51,8 +74,6 @@
 
 
     </div>
-
-
 
 
 </div>

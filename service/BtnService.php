@@ -9,13 +9,14 @@
 namespace app\service;
 
 
+use app\dao\BtnDao;
 use app\models\BtnModel;
 
 class BtnService
 {
 
     public $error = [];
-    protected $model;
+    public $model;
 
     public function __construct(BtnModel $model=null)
     {
@@ -36,5 +37,30 @@ class BtnService
     }
 
 
+    public static function getItem($id) {
+        $service = new static();
+        $item = $service->model->findOne($id);
+        return $item;
+    }
+
+
+    public function getReport() {
+
+        $btnDao = new BtnDao();
+        $list = $btnDao->find()
+            ->with(['click' => function ($query) {
+                $query->select('*');
+            }])
+            ->asArray()
+            ->all();
+
+        if(count($list)){
+            foreach ($list as $k=>$item) {
+                $list[$k]['tracking_count'] = (int)count($item['click']);
+            }
+        }
+
+        return $list;
+    }
 
 }

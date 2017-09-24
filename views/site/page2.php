@@ -20,12 +20,22 @@
         width: 100%;
     }
 
-    .section-androidone{
-        background: none;
+    .the_title{
+        font-size: 3em;
     }
-
-    .h-em{
-        font-size: 1.5em;
+    .the_content{
+        font-size: 1.5em; margin-top:12px;
+    }
+    .btn-wrap{
+        padding-top: 140px;
+    }
+    .btn-wrap a{
+        line-height: 100px; font-size: 2em; width: 260px;
+    }
+    .section .section-text .rect-short{
+        width: 220px;
+        height: 70px;
+        line-height: 70px;
     }
 </style>
 
@@ -68,35 +78,30 @@
 
         <div class="section-text" style="background: none;  padding-top: 50px;">
             <div style="color: #000;">
-                <div class="title1"><span class="h-em">提议</span>一个问题，类似“有哪些学习的网站可推荐”让别人帮你更精准推荐，</div>
-                <div class="title2">您也可以选择“回答”，来帮助别人，通过大家参与创作的形式把最好网站推荐给大家。</div>
-                <div class="title3">所有目录、内容都可以由任意人编辑修改</div>
+                <div class="title1 the_title" style="height: 200px; width: 75%;">
+                    <?= $model->title ?>
+                </div>
+                <div class="title3 the_content"><?= $model->content_1 ?></div>
             </div>
 
-            <div class="rect-long" style="display:none;">
 
-
-            <span class="text-top">
-              12MP＋12MP
-            </span>
-                <span class="text-down">
-              wide-angle/telephoto
-            </span>
-            </div>
-
-            <div style="padding-top: 70px;">
+            <div style="padding-top: 70px;" class='btn-wrap'>
 
 
                 <a href="<?=\yii\helpers\Url::to(['site/page3'])?>" style=" ">
 
-                    <div class="rect-short rect-short-left" style="line-height: 100px; border: 1px solid green; font-size: 2em; width: 200px;">
-                        提问
+                    <div class="rect-short rect-short-left"  >
+                        <?=\app\common\components\widget\BtnWidget::widget(['btn_id'=>3])?>
+
+
                     </div>
                 </a>
 
                 <a href="<?=\yii\helpers\Url::to(['site/page3'])?>">
-                    <div class="rect-short rect-short-right" style="line-height: 100px; border: 1px solid green; font-size: 2em; width: 200px;">
-                        回答
+                    <div class="rect-short rect-short-right"  >
+                        <?=\app\common\components\widget\BtnWidget::widget(['btn_id'=>4])?>
+
+
                     </div>
                 </a>
 
@@ -109,55 +114,9 @@
     </div>
 
 
-    <div class="section section-androidone" style="">
-        <div class="container">
-            <div class="section-text">
-
-                <!-- <div class="title1">Created by Xiaomi, Powered by Google</div>-->
-            </div>
-        </div>
-    </div>
 
 
 
 
 </div>
-</div>
-
-<div class="colorPop J_colorPop modal fade nation_en"></div>
-
-
-<div class="presalePop J_presalePop modal fade">
-    <div class="modal-header">
-        <a type="button" data-dismiss="modal" aria-hidden="true" class="modalclose iconfont">&#xe92b;</a>
-        <h3 class="title">Pre-order</h3>
-    </div>
-    <div class="modal-body">
-        <h4 class="subtitle">Make full payment now and your product(s) will be shipped out within 1 week</h4>
-        <ul class="info-list clearfix">
-            <li class="item1">
-                <span class="icon-common icon-1"></span>
-                <strong>Be the first to get it</strong>
-                <p>Pre-order to secure signature Mi product(s)</p>
-            </li>
-            <li class="item2">
-                <span class="icon-common icon-2"></span>
-                <strong>Available to ship within 1 week</strong>
-                <p>Purchase and make payment now. Expected to ship within 1 week</p>
-            </li>
-            <li class="item3">
-                <span class="icon-common icon-3"></span>
-                <strong>Delivery address cannot be changed</strong>
-                <p>To minimize scalper activities and protect the interests of Mi fans, delivery address cannot be
-                    changed</p>
-            </li>
-            <li class="item4">
-                <span class="icon-common icon-4"></span>
-                <strong>Price cannot be changed</strong>
-                <p>In the event of product price adjustment prior to delivery, price of paid orders will not be
-                    affected</p>
-            </li>
-        </ul>
-    </div>
-
 </div>

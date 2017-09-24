@@ -16,7 +16,10 @@ class IndexController extends BaseController
 {
     public function actionIndex(){
 
+        return $this->redirect(Url::to(['/admin/report/index']));
 
         return $this->render('index', ['model' => []]);
     }
+
+
 }

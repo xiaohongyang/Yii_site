@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model app\models\BtnCURD */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Btn Curds', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => '按钮管理', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="btn-curd-view">
@@ -31,7 +31,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'name',
             'display_text',
-            'link',
         ],
     ]) ?>
 

@@ -1,7 +1,7 @@
 body{background-color: rgb(255,255,255);}
 #bg{height: 100%;width: 16rem;background-color: rgb(228,228,228);position: relative;}
 #head{height: 2.5rem;width: 16rem;background-color: rgb(240,240,240);text-align: center;}
-#head .left{float: left;height: 2.3rem;width: 2.3rem;margin: 0.1rem 0 0.1rem 0.3rem;background: url(../imges/left.png) no-repeat center center;}
+#head .left{float: left;height: 2.3rem;width: 2.3rem;margin: 0.1rem 0 0.1rem 0.3rem;background: url(../images/left.png) no-repeat center center;}
 #head .right{float: right;width: 3rem;height: 2rem;margin: 0.25rem 0;margin-right:0.3rem;background-color: rgb(0,204,255);border-radius: 4px;font-size: 0.9rem;line-height: 2rem; }
 #head .center{height: 2.5rem;line-height: 2.5rem;font-size: 1.2rem;float: left;color: black;margin-left:2.7rem; }
 
@@ -20,7 +20,7 @@ body{background-color: rgb(255,255,255);}
 #up_idcard .content p input{font-size: 0.6rem;line-height: 1rem;border: 1px solid rgb(201,201,201);width: 8rem;}
 
 #up_idcard .head{font-size: 0.8rem;margin-left: 0.5rem;line-height: 1.6rem;}
-#up_idcard .close{width: 0.65rem;height: 0.65rem;float: right;margin-top: 0.4rem;background: url(../imges/close.png) center center;margin-right: 0.4rem;background-repeat: no-repeat;}
+#up_idcard .close{width: 0.65rem;height: 0.65rem;float: right;margin-top: 0.4rem;background: url(../images/close.png) center center;margin-right: 0.4rem;background-repeat: no-repeat;}
 
 
 #bottom{width: 16rem;height: 2rem;position: fixed;bottom: 0px;background-color: rgb(244,212,212);font-size: 0.8rem;}

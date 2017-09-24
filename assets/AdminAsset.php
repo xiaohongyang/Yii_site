@@ -15,6 +15,11 @@ use yii\web\AssetBundle;
  */
 class AdminAsset extends AssetBundle
 {
+
+    public $jsOptions = [
+        'position' => \yii\web\View::POS_HEAD
+    ];
+
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
@@ -22,7 +27,9 @@ class AdminAsset extends AssetBundle
     ];
     public $js = [
 
-        'js/admin/site.js'
+        'js/admin/site.js',
+        'js/admin/g2.js'
+
     ];
     public $depends = [
         'yii\web\YiiAsset',
