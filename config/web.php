@@ -54,10 +54,6 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
-        'mongodb' => [
-            'class' => 'yii\mongodb\Connection',
-            'dsn' => 'mongodb://root:123456@127.0.0.1:27017/test'
-        ],
         'urlManager'=>[
             'enablePrettyUrl' => true,
             'showScriptName' => false,
@@ -72,13 +68,7 @@ $config = [
         ],
         'mobileMsgHelpers' => [
             'class' => 'app\common\components\helpers\MobileMsgHelpers'
-        ],
-
-
-    ],
-    'controllerMap' => [
-        'class' => '\yii\mongodb\Connection',
-        'mongodb-migrate' => 'yii\mongodb\console\controllers\MigrateController'
+        ]
     ],
     'params' => $params,
 ];
@@ -91,9 +81,9 @@ if (YII_ENV_DEV) {
     ];
 
     $config['bootstrap'][] = 'gii';
-    $config['modules']['gii'] = array('class'=>'yii\gii\Module',
-        'allowedIPs' => ['127.0.0.1', '::1', '192.168.*.*', '192.168.178.20','*.*.*.*'],
-    );
+    $config['modules']['gii'] = [
+        'class' => 'yii\gii\Module',
+    ];
 }
 
 return $config;
