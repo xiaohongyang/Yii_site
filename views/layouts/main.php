@@ -14,24 +14,107 @@ if(\app\controllers\BaseController::check_wap())
 else
     AppAsset::register($this);
 ?>
-<?php $this->beginPage() ?>
-<!DOCTYPE HTML>
-<html xml:lang="en-EN" lang="en-EN">
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang=""> <!--<![endif]-->
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta http-equiv="Content-Type" content="text/html;charset=<?= Yii::$app->charset ?>">
-    <title>HIFI</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php $this->head() ?>
+
+    <meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
-    <?php $this->head() ?>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"/>
+    <link rel="stylesheet"
+          href="/static_source/css//cssthemes4/hxc_18_sedna/http________demo.cssmoban.com__cssthemes4__hxc_18_sedna__css__normalize.min.css.css">
+    <link rel="stylesheet"
+          href="/static_source/css//cssthemes4/hxc_18_sedna/http________demo.cssmoban.com__cssthemes4__hxc_18_sedna__css__bootstrap.min.css.css">
+    <link rel="stylesheet"
+          href="/static_source/css//cssthemes4/hxc_18_sedna/http________demo.cssmoban.com__cssthemes4__hxc_18_sedna__css__jquery.fancybox.css.css">
+    <link rel="stylesheet"
+          href="/static_source/css//cssthemes4/hxc_18_sedna/http________demo.cssmoban.com__cssthemes4__hxc_18_sedna__css__flexslider.css.css">
+    <link rel="stylesheet"
+          href="/static_source/css//cssthemes4/hxc_18_sedna/http________demo.cssmoban.com__cssthemes4__hxc_18_sedna__css__styles.css.css">
+    <link rel="stylesheet"
+          href="/static_source/css//cssthemes4/hxc_18_sedna/http________demo.cssmoban.com__cssthemes4__hxc_18_sedna__css__queries.css.css">
+    <link rel="stylesheet"
+          href="/static_source/css//cssthemes4/hxc_18_sedna/http________demo.cssmoban.com__cssthemes4__hxc_18_sedna__css__etline-font.css.css">
+    <link rel="stylesheet"
+          href="/static_source/css//cssthemes4/hxc_18_sedna/http________demo.cssmoban.com__cssthemes4__hxc_18_sedna__bower_components__animate.css__animate.min.css.css">
+    <link rel="stylesheet"
+          href="/static_source/css//cssthemes4/hxc_18_sedna/http________maxcdn.bootstrapcdn.com__font-awesome__4.3.0__css__font-awesome.min.css.css">
+
+    <style type="text/css">
+        .hero-content h1{
+            font-size: 25px;
+        }
+        .page2 .hero {
+            background : url(/static_source/css/cssthemes4/img/hero-img9.jpg) center center;
+        }
+        .page3 .hero {
+            background : url(/static_source/css/cssthemes4/img/hero-bg-01.jpg) center center;
+        }
+    </style>
 </head>
-<body>
-<?php $this->beginBody() ?>
+<body id="top" class="<?=Yii::$app->controller->action->id?>">
+<div class="adcenter" style="height: 90px;"> </script></div>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="browsehappy.com_">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<section class="hero">
+    <section class="navigation">
+        <header>
+            <div class="header-content">
+                <div class="logo"><a href="/"  ><h3 style="color:#999;letter-spacing: 9px">H<span style="color:#fff">I</span>FI</h3></a></div>
+                <div class="header-nav">
+                    <nav>
+                        <ul class="primary-nav">
+                            <li><a href="#.htmlfeatures">我们</a></li>
+                            <li><a href="#.htmlassets">产品</a></li>
+                            <li><a href="#.htmlblog">服务</a></li>
+                            <li><a href="#.htmldownload">联系</a></li>
+                        </ul>
+                        <ul class="member-actions">
+                            <li><a href="#.htmldownload" class="login">登记</a></li>
+                            <li><a href="#.htmldownload" class="btn-white btn-small">注册</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="navicon">
+                    <a class="nav-toggle" href="#.html"><span></span></a>
+                </div>
+            </div>
+        </header>
+    </section>
 
-        <?= $content ?>
 
-<?php $this->endBody() ?>
+
+    <?php $this->beginBody() ?>
+
+    <?= $content ?>
+
+    <?php $this->endBody() ?>
+
+    <div class="down-arrow floating-arrow"><a href="#.html"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></i></a></div>
+</section>
+
+
+
+
+
+
 <script type="text/javascript">
 
     $(function(){

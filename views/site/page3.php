@@ -1,80 +1,66 @@
-<style type="text/css">
-    .section-camera .container .section-img{
-        left: 0;
-        margin-left: 15%;
-    }
-
-    .the_title{
-        font-size: 3em;
-    }
-    .the_content{
-        font-size: 1.5em; margin-top:12px;
-    }
-    .btn-wrap{
-        padding-top: 140px; margin-left: 15%;
-    }
-    .btn-wrap a{
-        line-height: 100px; font-size: 2em; width: 260px;
-    }
-    .section .section-text .rect-short{
-        width: 220px;
-        height: 70px;
-        line-height: 70px;
-    }
-</style>
-
-<div class="entry-board J_entryBoard">
-    <div class="container">
+<header>
+    <div class="header-content">
+        <div class="logo"><a href="#.html" class="hide"><img src="/static_source/image/demo.cssmoban.com/cssthemes4/hxc_18_sedna/img//cssthemes4/hxc_18_sedna/sedna-logo.png" alt="Sedna logo"></a><h3 style="color:#999;letter-spacing: 9px">H<span style="color:#fff">I</span>FI</h3></div>
+        <div class="header-nav">
+            <nav>
+                <ul class="primary-nav">
+                    <li><a href="#.htmlfeatures">我们</a></li>
+                    <li><a href="#.htmlassets">产品</a></li>
+                    <li><a href="#.htmlblog">服务</a></li>
+                    <li><a href="#.htmldownload">联系</a></li>
+                </ul>
+                <ul class="member-actions">
+                    <li><a href="#.htmldownload" class="login">登记</a></li>
+                    <li><a href="#.htmldownload" class="btn-white btn-small">注册</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="navicon">
+            <a class="nav-toggle" href="#.html"><span></span></a>
+        </div>
     </div>
-</div>
 
+    <div class="row">
 
-<div class="main">
+        <div class="col-sm-12">
+            <div class="" style="
+            margin-top: 150px;
+            color: #fff;
+">
+                <div class="row">
+                    <div class="col-sm-12">
 
-
-    <div class="bd xm-product-box J_section-box">
-
-
-        <div class="section section-camera" style="">
-            <div class="container">
-                <div class="section-img" style="top: 220px;">
-                    <div class="the_title" style="">
-                        <?=$model->title?>
-
-                    </div>
-                    <div class="the_content" style="">
-                        <?=$model->content_1?>
-                    </div>
-                </div>
-
-                <div class="section-text">
-                    <div class="title1"> </div>
-                    <div class="title2"> </div>
-                    <div class="rect-long" style="display:none;">
-
-                    </div>
-
-                    <div class="btn-wrap" style="">
-
-
-                        <a href="<?=\yii\helpers\Url::to(['site/page3'])?>" style=" ">
-
-                            <div class="rect-short rect-short-left"
-                                 style="">
-                                <?=\app\common\components\widget\BtnWidget::widget(['btn_id'=>5])?>
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">您的邮箱：</label>
+                                <input type="text" name="email" style=" color: #000; text-indent: 15px;" required placeholder="Enter Email Address">
                             </div>
-                        </a>
+
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">您的意见：</label>
+                                <textarea name="content" style="width: 350px; text-indent: 15px; color: #000;" placeholder="Enter Your Suggestion" ></textarea>
+                            </div>
+
+
+                            <input type="button" class="btn btn-small btn-primary guest-book-submit"  value="提交"/>
+                        </form>
+
+
 
 
                     </div>
-
                 </div>
             </div>
         </div>
-
-
     </div>
+</header>
 
 
-</div>
-</div>
+
+
+
+
+
+
+
